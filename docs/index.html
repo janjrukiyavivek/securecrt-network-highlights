@@ -7,47 +7,21 @@
 <meta name="description" content="A generated, validated SecureCRT keyword-highlighting pack for enterprise network engineers. Cisco, Arista, Juniper, Linux, AWS/Azure, SD-WAN, Sophos, and more.">
 <style>
   :root{
-    --bg:#12161B;
-    --panel:#181D24;
-    --ink:#D8DEE4;
-    --ink-soft:#8A93A0;
-    --rule:#262D36;
-    --accent:#4CAF7D;
-    --accent-soft:#3FB6B0;
-    --sev-crit:#E5484D;
-    --sev-warn:#F5A623;
-    --sev-ok:#4CAF7D;
-    --sev-info:#8A93A0;
+    --bg:#0b1220;
+    --bg-alt:#0d1526;
+    --panel:#111827;
+    --ink:#f8fafc;
+    --ink-soft:#94a3b8;
+    --ink-soft2:#cbd5e1;
+    --rule:rgba(255,255,255,0.08);
+    --accent:#38bdf8;
+    --btn:#0066cc;
+    --btn-hover:#0077ee;
+    --sev-crit:#f87171;
+    --sev-warn:#fbbf24;
+    --sev-ok:#4ade80;
     --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
-    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  :root[data-theme="light"]{
-    --bg:#F4F6F8;
-    --panel:#FFFFFF;
-    --ink:#1A1F26;
-    --ink-soft:#5A6472;
-    --rule:#DCE2E8;
-    --accent:#1F8A57;
-    --accent-soft:#0E8C86;
-    --sev-crit:#C22B30;
-    --sev-warn:#B5710A;
-    --sev-ok:#1F8A57;
-    --sev-info:#5A6472;
-  }
-  @media (prefers-color-scheme: light){
-    :root:not([data-theme="dark"]){
-      --bg:#F4F6F8;
-      --panel:#FFFFFF;
-      --ink:#1A1F26;
-      --ink-soft:#5A6472;
-      --rule:#DCE2E8;
-      --accent:#1F8A57;
-      --accent-soft:#0E8C86;
-      --sev-crit:#C22B30;
-      --sev-warn:#B5710A;
-      --sev-ok:#1F8A57;
-      --sev-info:#5A6472;
-    }
+    --sans:'Inter','Segoe UI',sans-serif;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -56,120 +30,124 @@
     font-family:var(--sans);
     font-size:16px; line-height:1.6;
   }
-  a{ color:var(--accent-soft); }
+  a{ color:var(--accent); }
   code{ font-family:var(--mono); }
 
   /* ===== TOP BAR ===== */
   .topbar{
     position:sticky; top:0; z-index:20;
-    background:var(--bg);
+    background:rgba(11,18,32,0.92);
+    backdrop-filter:blur(6px);
     border-bottom:1px solid var(--rule);
     display:flex; align-items:center; justify-content:space-between;
-    padding:14px 24px;
+    padding:18px 24px;
   }
   .topbar .brand{
-    font-family:var(--mono); font-weight:700; font-size:14px;
+    font-weight:700; font-size:15px;
     color:var(--ink); letter-spacing:0.02em;
     display:flex; align-items:center; gap:8px;
+    text-decoration:none;
   }
   .topbar .brand .dot{ color:var(--accent); }
-  .topbar .links{ display:flex; gap:18px; align-items:center; font-size:13.5px; }
-  .topbar .links a{ color:var(--ink-soft); text-decoration:none; }
-  .topbar .links a:hover{ color:var(--ink); }
+  .topbar .links{ display:flex; gap:20px; align-items:center; font-size:13.5px; }
+  .topbar .links a{ color:var(--ink-soft2); text-decoration:none; transition:color 140ms ease; }
+  .topbar .links a:hover{ color:var(--accent); }
   .topbar .cta{
-    background:var(--accent); color:#0B0F0D; padding:7px 14px;
-    font-weight:700; text-decoration:none; font-size:13px;
+    background:var(--btn); color:#fff; padding:8px 16px;
+    border-radius:8px; font-weight:600; text-decoration:none; font-size:13px;
+    transition:background 140ms ease, transform 140ms ease;
   }
+  .topbar .cta:hover{ background:var(--btn-hover); transform:translateY(-1px); }
 
   /* ===== LAYOUT ===== */
   .shell{ display:flex; max-width:1180px; margin:0 auto; }
   .sidebar{
     width:220px; flex-shrink:0;
     padding:32px 20px 60px 24px;
-    position:sticky; top:57px;
+    position:sticky; top:65px;
     align-self:flex-start;
-    height:calc(100vh - 57px);
+    height:calc(100vh - 65px);
     overflow-y:auto;
   }
   .sidebar nav{ display:flex; flex-direction:column; gap:2px; }
   .sidebar a{
     color:var(--ink-soft); text-decoration:none; font-size:13.5px;
     padding:6px 10px; border-left:2px solid transparent;
+    transition:color 140ms ease;
   }
-  .sidebar a:hover{ color:var(--ink); border-left-color:var(--rule); }
+  .sidebar a:hover{ color:var(--ink); border-left-color:var(--accent); }
   .sidebar .group-label{
-    font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase;
-    color:var(--accent-soft); margin:18px 0 6px 10px;
+    font-size:11px; letter-spacing:0.1em; text-transform:uppercase; font-weight:700;
+    color:var(--accent); margin:18px 0 6px 10px;
   }
   .sidebar .group-label:first-child{ margin-top:0; }
 
-  main{ flex:1; min-width:0; padding:40px 32px 100px; }
-  section{ margin-bottom:64px; scroll-margin-top:72px; }
+  main{ flex:1; min-width:0; padding:48px 32px 100px; }
+  section{ margin-bottom:64px; scroll-margin-top:80px; }
   section h2{
-    font-family:var(--mono); font-size:13px; letter-spacing:0.12em; text-transform:uppercase;
-    color:var(--accent-soft); margin:0 0 16px;
+    font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; font-weight:700;
+    color:var(--accent); margin:0 0 18px;
     display:flex; align-items:center; gap:12px;
   }
   section h2::after{ content:""; flex:1; height:1px; background:var(--rule); }
   section h3{ font-size:16px; font-weight:700; margin:24px 0 8px; color:var(--ink); }
-  section p{ max-width:70ch; color:var(--ink); margin:0 0 14px; }
+  section p{ max-width:70ch; color:var(--ink-soft2); margin:0 0 14px; }
   section p.soft{ color:var(--ink-soft); }
 
   /* ===== HERO ===== */
   .hero{ padding:8px 0 8px; }
   .hero h1{
-    font-family:var(--mono); font-size:clamp(28px,4vw,42px); font-weight:800;
+    font-size:clamp(28px,4vw,42px); font-weight:700;
     margin:0 0 10px; letter-spacing:-0.01em; text-wrap:balance;
     color:var(--ink);
   }
-  .hero .tagline{ font-size:17px; color:var(--ink-soft); max-width:60ch; margin:0 0 28px; }
+  .hero .tagline{ font-size:17px; color:var(--ink-soft2); max-width:60ch; margin:0 0 28px; }
 
   /* ===== TERMINAL DEMO ===== */
   .term{
-    background:#0A0D10; border:1px solid var(--rule);
-    max-width:100%; overflow-x:auto;
+    background:#080d16; border:1px solid var(--rule); border-radius:12px;
+    max-width:100%; overflow:hidden;
     box-shadow:0 20px 50px -30px rgba(0,0,0,0.6);
   }
-  :root[data-theme="light"] .term, @media (prefers-color-scheme:light){ .term{ background:#12161B; } }
   .term .term-bar{
     display:flex; align-items:center; gap:8px;
-    padding:10px 14px; border-bottom:1px solid #1E242B;
+    padding:10px 14px; border-bottom:1px solid var(--rule);
   }
   .term .term-bar .light{ width:10px; height:10px; border-radius:50%; }
-  .term .term-bar .light.r{ background:#E5484D; }
-  .term .term-bar .light.y{ background:#F5A623; }
-  .term .term-bar .light.g{ background:#4CAF7D; }
-  .term .term-bar .title{ margin-left:10px; font-family:var(--mono); font-size:12px; color:#6B7280; }
+  .term .term-bar .light.r{ background:#f87171; }
+  .term .term-bar .light.y{ background:#fbbf24; }
+  .term .term-bar .light.g{ background:#4ade80; }
+  .term .term-bar .title{ margin-left:10px; font-family:var(--mono); font-size:12px; color:#64748b; }
   .term pre{
     margin:0; padding:20px 22px; font-family:var(--mono); font-size:13.5px; line-height:1.75;
-    color:#C7CDD4; white-space:pre; overflow-x:auto;
+    color:#cbd5e1; white-space:pre; overflow-x:auto;
   }
   .term .crit{ color:var(--sev-crit); font-weight:700; }
   .term .warn{ color:var(--sev-warn); font-weight:700; }
   .term .ok{ color:var(--sev-ok); font-weight:700; }
-  .term .info{ color:#6B7280; }
-  .term .prompt{ color:#7FB4E8; }
+  .term .prompt{ color:var(--accent); }
 
   /* ===== TABLES ===== */
-  .table-wrap{ overflow-x:auto; border:1px solid var(--rule); }
+  .table-wrap{ overflow-x:auto; border:1px solid var(--rule); border-radius:10px; }
   table{ width:100%; border-collapse:collapse; font-size:14px; }
-  th, td{ text-align:left; padding:9px 14px; border-bottom:1px solid var(--rule); }
-  th{ font-family:var(--mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); background:var(--panel); }
+  th, td{ text-align:left; padding:10px 14px; border-bottom:1px solid var(--rule); }
+  th{ font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); background:var(--panel); }
+  td{ color:var(--ink-soft2); }
   td.center, th.center{ text-align:center; }
   .yes{ color:var(--sev-ok); font-weight:700; }
 
   /* ===== LISTS ===== */
   ul.clean{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:10px; }
-  ul.clean li{ padding-left:20px; position:relative; max-width:70ch; color:var(--ink); }
-  ul.clean li::before{ content:"—"; position:absolute; left:0; color:var(--accent-soft); }
-  ol.steps{ margin:0; padding-left:22px; display:flex; flex-direction:column; gap:8px; }
+  ul.clean li{ padding-left:20px; position:relative; max-width:70ch; color:var(--ink-soft2); }
+  ul.clean li::before{ content:"—"; position:absolute; left:0; color:var(--accent); }
+  ol.steps{ margin:0; padding-left:22px; display:flex; flex-direction:column; gap:8px; color:var(--ink-soft2); }
   ol.steps li{ max-width:70ch; }
-  ol.steps code{ background:var(--panel); padding:2px 6px; border:1px solid var(--rule); font-size:13px; }
+  ol.steps code{ background:var(--panel); padding:2px 6px; border-radius:4px; border:1px solid var(--rule); font-size:13px; color:var(--ink); }
 
   /* ===== CHANGELOG ===== */
   .release{ border-left:2px solid var(--rule); padding-left:20px; margin-bottom:32px; }
   .release .ver{
-    font-family:var(--mono); font-weight:700; font-size:15px; color:var(--ink);
+    font-weight:700; font-size:15px; color:var(--ink);
     margin:0 0 10px;
   }
   .release ul{ margin:0; padding-left:18px; }
@@ -186,14 +164,14 @@
 
   @media (max-width:860px){
     .sidebar{ display:none; }
-    main{ padding:28px 20px 80px; }
+    main{ padding:32px 20px 80px; }
   }
 </style>
 </head>
 <body>
 
 <div class="topbar">
-  <div class="brand"><span class="dot">▍</span>Network Engineer Ultimate</div>
+  <a class="brand" href="#overview"><span class="dot">▍</span>Network Engineer Ultimate</a>
   <div class="links">
     <a href="#platforms">Platforms</a>
     <a href="#install">Install</a>
@@ -294,9 +272,9 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
     <section id="unsupported">
       <h2>Not covered</h2>
       <ul class="clean">
-        <li><b>Palo Alto / Fortinet / FTD CLI specifics</b> — only generic, cross-vendor tokens (ACL, IPsec, IKE) highlight; vendor-specific command syntax isn't covered yet.</li>
-        <li><b>Cisco ACI</b> — not covered.</li>
-        <li><b>Context beyond the current line</b> — SecureCRT highlighting is per-line regex matching; it cannot tell BGP's "Active" state apart from an HSRP "Active" router by looking at surrounding lines.</li>
+        <li><b style="color:var(--ink)">Palo Alto / Fortinet / FTD CLI specifics</b> — only generic, cross-vendor tokens (ACL, IPsec, IKE) highlight; vendor-specific command syntax isn't covered yet.</li>
+        <li><b style="color:var(--ink)">Cisco ACI</b> — not covered.</li>
+        <li><b style="color:var(--ink)">Context beyond the current line</b> — SecureCRT highlighting is per-line regex matching; it cannot tell BGP's "Active" state apart from an HSRP "Active" router by looking at surrounding lines.</li>
       </ul>
     </section>
 
@@ -307,7 +285,7 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
         <li>Run <code>python3 tools/validate_highlights.py</code> to confirm it's well-formed.</li>
         <li>In SecureCRT: <code>Options → Session Options → Terminal → Emulation → Keyword Highlighting → Import</code>, and select the generated <code>.ini</code> file.</li>
       </ol>
-      <p class="soft" style="margin-top:14px;">Or skip the build step entirely — use the <a href="#" onclick="return false;">Download .ini</a> link at the top of this page to grab the latest generated file directly.</p>
+      <p class="soft" style="margin-top:14px;">Or skip the build step entirely — use the Download .ini link at the top of this page to grab the latest generated file directly.</p>
     </section>
 
     <section id="principles">
