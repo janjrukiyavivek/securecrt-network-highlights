@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Network Engineer Ultimate â€” SecureCRT Highlighting Pack</title>
+<title>Network Engineer Ultimate — SecureCRT Highlighting Pack</title>
 <meta name="description" content="A generated, validated SecureCRT keyword-highlighting pack for enterprise network engineers. Cisco, Arista, Juniper, Linux, AWS/Azure, SD-WAN, Sophos, and more.">
 <style>
   :root{
@@ -161,7 +161,7 @@
   /* ===== LISTS ===== */
   ul.clean{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:10px; }
   ul.clean li{ padding-left:20px; position:relative; max-width:70ch; color:var(--ink); }
-  ul.clean li::before{ content:"â€”"; position:absolute; left:0; color:var(--accent-soft); }
+  ul.clean li::before{ content:"—"; position:absolute; left:0; color:var(--accent-soft); }
   ol.steps{ margin:0; padding-left:22px; display:flex; flex-direction:column; gap:8px; }
   ol.steps li{ max-width:70ch; }
   ol.steps code{ background:var(--panel); padding:2px 6px; border:1px solid var(--rule); font-size:13px; }
@@ -193,7 +193,7 @@
 <body>
 
 <div class="topbar">
-  <div class="brand"><span class="dot">â–</span>Network Engineer Ultimate</div>
+  <div class="brand"><span class="dot">▍</span>Network Engineer Ultimate</div>
   <div class="links">
     <a href="#platforms">Platforms</a>
     <a href="#install">Install</a>
@@ -225,12 +225,12 @@
   <main>
     <section class="hero" id="overview">
       <h1>Network Engineer Ultimate</h1>
-      <p class="tagline">A SecureCRT keyword-highlighting pack generated and validated from data â€” not hand-edited â€” covering the multi-vendor CLI output a network engineer actually sees every day.</p>
+      <p class="tagline">A SecureCRT keyword-highlighting pack generated and validated from data — not hand-edited — covering the multi-vendor CLI output a network engineer actually sees every day.</p>
 
       <div class="term">
         <div class="term-bar">
           <span class="light r"></span><span class="light y"></span><span class="light g"></span>
-          <span class="title">SecureCRT â€” R1</span>
+          <span class="title">SecureCRT — R1</span>
         </div>
         <pre><span class="prompt">R1#</span> show ip bgp summary
 BGP router identifier 10.0.0.1, local AS number 65001
@@ -241,13 +241,13 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
 <span class="crit">%LINK-3-UPDOWN</span>: Interface GigabitEthernet0/1, changed state to <span class="crit">down</span>
 <span class="warn">%OSPF-5-ADJCHG</span>: Process 1, Nbr 10.0.0.3 on Gi0/2 from FULL to <span class="crit">DOWN</span></pre>
       </div>
-      <p class="soft" style="margin-top:14px; font-size:13.5px;">Severity-tiered by design: %LINK-3 and a bare "down" state read as critical (red), %OSPF-5 reads as a warning (amber) â€” matching SecureCRT's own top-to-bottom, first-match-wins highlighting engine.</p>
+      <p class="soft" style="margin-top:14px; font-size:13.5px;">Severity-tiered by design: %LINK-3 and a bare "down" state read as critical (red), %OSPF-5 reads as a warning (amber) — matching SecureCRT's own top-to-bottom, first-match-wins highlighting engine.</p>
     </section>
 
     <section id="why">
       <h2>Why it's different</h2>
-      <p>Most highlight files accumulate duplicate and conflicting rules over years of manual edits â€” the same word ends up colored two different ways depending on which rule was pasted in last, and nobody notices because SecureCRT silently uses whichever rule comes first.</p>
-      <p>This pack is generated from <code>tools/build.py</code>, which refuses to build if a regex is duplicated or fails to compile, and <code>tools/validate_highlights.py</code> independently checks the output file's structure. Every cross-section word collision found during development â€” e.g. "Active" meaning three different things in BGP vs. HSRP vs. generic interface state â€” was deliberately resolved and documented inline in the build script, not left as a silent bug.</p>
+      <p>Most highlight files accumulate duplicate and conflicting rules over years of manual edits — the same word ends up colored two different ways depending on which rule was pasted in last, and nobody notices because SecureCRT silently uses whichever rule comes first.</p>
+      <p>This pack is generated from <code>tools/build.py</code>, which refuses to build if a regex is duplicated or fails to compile, and <code>tools/validate_highlights.py</code> independently checks the output file's structure. Every cross-section word collision found during development — e.g. "Active" meaning three different things in BGP vs. HSRP vs. generic interface state — was deliberately resolved and documented inline in the build script, not left as a silent bug.</p>
     </section>
 
     <section id="platforms">
@@ -255,16 +255,16 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
       <div class="table-wrap">
         <table>
           <tr><th>Platform</th><th class="center">Status</th></tr>
-          <tr><td>Cisco IOS / IOS-XE / NX-OS / IOS-XR / ASA</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Arista EOS</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Juniper JunOS</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Linux</td><td class="center yes">âœ“</td></tr>
-          <tr><td>FRRouting / VyOS</td><td class="center yes">âœ“</td></tr>
-          <tr><td>AWS / Azure networking, VMware NSX</td><td class="center yes">âœ“</td></tr>
-          <tr><td>WireGuard</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Cisco SD-WAN (vManage / vSmart / vBond)</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Sophos Firewall (SFOS)</td><td class="center yes">âœ“</td></tr>
-          <tr><td>tcpdump output</td><td class="center yes">âœ“</td></tr>
+          <tr><td>Cisco IOS / IOS-XE / NX-OS / IOS-XR / ASA</td><td class="center yes">✓</td></tr>
+          <tr><td>Arista EOS</td><td class="center yes">✓</td></tr>
+          <tr><td>Juniper JunOS</td><td class="center yes">✓</td></tr>
+          <tr><td>Linux</td><td class="center yes">✓</td></tr>
+          <tr><td>FRRouting / VyOS</td><td class="center yes">✓</td></tr>
+          <tr><td>AWS / Azure networking, VMware NSX</td><td class="center yes">✓</td></tr>
+          <tr><td>WireGuard</td><td class="center yes">✓</td></tr>
+          <tr><td>Cisco SD-WAN (vManage / vSmart / vBond)</td><td class="center yes">✓</td></tr>
+          <tr><td>Sophos Firewall (SFOS)</td><td class="center yes">✓</td></tr>
+          <tr><td>tcpdump output</td><td class="center yes">✓</td></tr>
         </table>
       </div>
     </section>
@@ -274,19 +274,19 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
       <div class="table-wrap">
         <table>
           <tr><th>Feature</th><th class="center">Status</th></tr>
-          <tr><td>BGP / OSPF / ISIS / EIGRP / RIP</td><td class="center yes">âœ“</td></tr>
-          <tr><td>MPLS / LDP / Segment Routing</td><td class="center yes">âœ“</td></tr>
-          <tr><td>VXLAN / EVPN (route types)</td><td class="center yes">âœ“</td></tr>
-          <tr><td>HSRP / VRRP / GLBP (FHRP)</td><td class="center yes">âœ“</td></tr>
-          <tr><td>PIM / MSDP / IGMP</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Nexus vPC, StackWise / VSS</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Syslog severity (0â€“7, colour per tier)</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Dangerous commands (reverse video)</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Optical DOM readings</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Hardware (Supervisor / Linecard / FPGA)</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Cisco bug IDs (CSCxxNNNNN) / CVEs</td><td class="center yes">âœ“</td></tr>
-          <tr><td>Sophos VPN / HA / firewall-action events</td><td class="center yes">âœ“</td></tr>
-          <tr><td>tcpdump TCP flags ([S] / [R] / [F] / [.])</td><td class="center yes">âœ“</td></tr>
+          <tr><td>BGP / OSPF / ISIS / EIGRP / RIP</td><td class="center yes">✓</td></tr>
+          <tr><td>MPLS / LDP / Segment Routing</td><td class="center yes">✓</td></tr>
+          <tr><td>VXLAN / EVPN (route types)</td><td class="center yes">✓</td></tr>
+          <tr><td>HSRP / VRRP / GLBP (FHRP)</td><td class="center yes">✓</td></tr>
+          <tr><td>PIM / MSDP / IGMP</td><td class="center yes">✓</td></tr>
+          <tr><td>Nexus vPC, StackWise / VSS</td><td class="center yes">✓</td></tr>
+          <tr><td>Syslog severity (0–7, colour per tier)</td><td class="center yes">✓</td></tr>
+          <tr><td>Dangerous commands (reverse video)</td><td class="center yes">✓</td></tr>
+          <tr><td>Optical DOM readings</td><td class="center yes">✓</td></tr>
+          <tr><td>Hardware (Supervisor / Linecard / FPGA)</td><td class="center yes">✓</td></tr>
+          <tr><td>Cisco bug IDs (CSCxxNNNNN) / CVEs</td><td class="center yes">✓</td></tr>
+          <tr><td>Sophos VPN / HA / firewall-action events</td><td class="center yes">✓</td></tr>
+          <tr><td>tcpdump TCP flags ([S] / [R] / [F] / [.])</td><td class="center yes">✓</td></tr>
         </table>
       </div>
     </section>
@@ -294,9 +294,9 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
     <section id="unsupported">
       <h2>Not covered</h2>
       <ul class="clean">
-        <li><b>Palo Alto / Fortinet / FTD CLI specifics</b> â€” only generic, cross-vendor tokens (ACL, IPsec, IKE) highlight; vendor-specific command syntax isn't covered yet.</li>
-        <li><b>Cisco ACI</b> â€” not covered.</li>
-        <li><b>Context beyond the current line</b> â€” SecureCRT highlighting is per-line regex matching; it cannot tell BGP's "Active" state apart from an HSRP "Active" router by looking at surrounding lines.</li>
+        <li><b>Palo Alto / Fortinet / FTD CLI specifics</b> — only generic, cross-vendor tokens (ACL, IPsec, IKE) highlight; vendor-specific command syntax isn't covered yet.</li>
+        <li><b>Cisco ACI</b> — not covered.</li>
+        <li><b>Context beyond the current line</b> — SecureCRT highlighting is per-line regex matching; it cannot tell BGP's "Active" state apart from an HSRP "Active" router by looking at surrounding lines.</li>
       </ul>
     </section>
 
@@ -305,9 +305,9 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
       <ol class="steps">
         <li>Run <code>python3 tools/build.py</code> to (re)generate <code>build/Network Engineer Ultimate.ini</code>.</li>
         <li>Run <code>python3 tools/validate_highlights.py</code> to confirm it's well-formed.</li>
-        <li>In SecureCRT: <code>Options â†’ Session Options â†’ Terminal â†’ Emulation â†’ Keyword Highlighting â†’ Import</code>, and select the generated <code>.ini</code> file.</li>
+        <li>In SecureCRT: <code>Options → Session Options → Terminal → Emulation → Keyword Highlighting → Import</code>, and select the generated <code>.ini</code> file.</li>
       </ol>
-      <p class="soft" style="margin-top:14px;">Or skip the build step entirely â€” use the <a href="#" onclick="return false;">Download .ini</a> link at the top of this page to grab the latest generated file directly.</p>
+      <p class="soft" style="margin-top:14px;">Or skip the build step entirely — use the <a href="#" onclick="return false;">Download .ini</a> link at the top of this page to grab the latest generated file directly.</p>
     </section>
 
     <section id="principles">
@@ -315,9 +315,9 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
       <ul class="clean">
         <li>Designed for production troubleshooting, not a colorful terminal. A rule only exists if it highlights a condition that needs attention or speeds up reading dense CLI output.</li>
         <li>Highlight the exception, not the norm: counters only light up when non-zero; "down" only matches when it's actually describing link/protocol state.</li>
-        <li>Specific regex before generic regex, always â€” SecureCRT applies the first matching rule top-to-bottom per character, so ordering is the mechanism that decides which color wins a contested word.</li>
+        <li>Specific regex before generic regex, always — SecureCRT applies the first matching rule top-to-bottom per character, so ordering is the mechanism that decides which color wins a contested word.</li>
         <li>Generated from data (<code>tools/build.py</code>), not hand-edited, so duplicate and conflicting rules are caught by the build itself instead of accumulating silently over years.</li>
-        <li>Scope is intentionally limited to platforms validated against real sample output â€” new vendor support is added based on real-world usage, not completeness for its own sake.</li>
+        <li>Scope is intentionally limited to platforms validated against real sample output — new vendor support is added based on real-world usage, not completeness for its own sake.</li>
       </ul>
     </section>
 
@@ -325,7 +325,7 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
       <h2>Maintaining</h2>
       <p>All rules live as data in <code>tools/build.py</code> (see <code>docs/REGEX_GUIDE.md</code> for conventions). To add or change a rule:</p>
       <ol class="steps">
-        <li>Edit <code>tools/build.py</code> â€” it fails loudly on a duplicate or invalid regex rather than silently producing a broken file.</li>
+        <li>Edit <code>tools/build.py</code> — it fails loudly on a duplicate or invalid regex rather than silently producing a broken file.</li>
         <li>Run <code>python3 tools/validate_highlights.py</code> to check the generated file's structure.</li>
         <li>Run <code>python3 tools/test_samples.py</code> to see how the new rule renders against realistic multi-vendor <code>show</code>-command output, and confirm nothing else's coloring shifted as a side effect.</li>
       </ol>
@@ -337,10 +337,10 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
       <div class="release">
         <p class="ver">v1.2</p>
         <ul>
-          <li>Added <code>tools/test_samples.py</code>, simulating SecureCRT's actual top-to-bottom, first-match-wins behaviour against realistic multi-vendor output â€” surfaced and fixed four real bugs (BGP best-path marker misread as a login prompt, "line protocol is down" losing its colour to a generic rule, a Route Target regex colliding with BGP uptime timestamps, and EVPN bracket-notation route types not matching).</li>
+          <li>Added <code>tools/test_samples.py</code>, simulating SecureCRT's actual top-to-bottom, first-match-wins behaviour against realistic multi-vendor output — surfaced and fixed four real bugs (BGP best-path marker misread as a login prompt, "line protocol is down" losing its colour to a generic rule, a Route Target regex colliding with BGP uptime timestamps, and EVPN bracket-notation route types not matching).</li>
           <li>Added a curated Sophos Firewall (SFOS) section: platform terms, daemon/service names, firewall actions, VPN/HA/routing events, security modules, and audit terms.</li>
           <li>Added a tcpdump-output section: TCP flag brackets coloured by severity, seq/ack/win/length fields, ICMPv6, and microsecond timestamps.</li>
-          <li>Removed the legacy <code>source/</code> directory of reference files â€” no longer presented as a merge of prior highlight packs.</li>
+          <li>Removed the legacy <code>source/</code> directory of reference files — no longer presented as a merge of prior highlight packs.</li>
         </ul>
       </div>
 
@@ -356,7 +356,7 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
       </div>
 
       <div class="release">
-        <p class="ver">v1.0 â€” Network Engineer Ultimate</p>
+        <p class="ver">v1.0 — Network Engineer Ultimate</p>
         <ul>
           <li>Initial release. Engineered from scratch as a generated, validated keyword-highlight pack.</li>
           <li>44 sections, 118 regex rules, covering Cisco IOS/IOS-XE/NX-OS/IOS-XR/ASA, Arista EOS, Juniper JunOS, Linux, FRRouting, VyOS, AWS/Azure/NSX, and WireGuard.</li>
@@ -367,7 +367,7 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
 </div>
 
 <footer>
-  <span>MIT Licensed Â· <a href="https://github.com/janjrukiyavivek/securecrt-network-highlights" target="_blank" rel="noopener">github.com/janjrukiyavivek/securecrt-network-highlights</a></span>
+  <span>MIT Licensed · <a href="https://github.com/janjrukiyavivek/securecrt-network-highlights" target="_blank" rel="noopener">github.com/janjrukiyavivek/securecrt-network-highlights</a></span>
   <span>Built by <a href="https://bytebox.network" target="_blank" rel="noopener">Vivek Janjrukiya</a></span>
 </footer>
 
