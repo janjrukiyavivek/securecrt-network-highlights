@@ -89,6 +89,9 @@
   section h3{ font-size:16px; font-weight:700; margin:24px 0 8px; color:var(--ink); }
   section p{ max-width:70ch; color:var(--ink-soft2); margin:0 0 14px; }
   section p.soft{ color:var(--ink-soft); }
+  .mt-note{ margin-top:14px; }
+  .text-sm{ font-size:13.5px; }
+  ul.clean li b, ol.steps li b{ color:var(--ink); }
 
   /* ===== HERO ===== */
   .hero{ padding:8px 0 8px; }
@@ -216,7 +219,7 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
 <span class="crit">%LINK-3-UPDOWN</span>: Interface GigabitEthernet0/1, changed state to <span class="crit">down</span>
 <span class="warn">%OSPF-5-ADJCHG</span>: Process 1, Nbr 10.0.0.3 on Gi0/2 from FULL to <span class="crit">DOWN</span></pre>
       </div>
-      <p class="soft" style="margin-top:14px; font-size:13.5px;">Severity-tiered by design: %LINK-3 and a bare "down" state read as critical (red), %OSPF-5 reads as a warning (amber) — matching SecureCRT's own top-to-bottom, first-match-wins highlighting engine.</p>
+      <p class="soft mt-note text-sm">Severity-tiered by design: %LINK-3 and a bare "down" state read as critical (red), %OSPF-5 reads as a warning (amber) — matching SecureCRT's own top-to-bottom, first-match-wins highlighting engine.</p>
     </section>
 
     <section id="why">
@@ -269,9 +272,9 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
     <section id="unsupported">
       <h2>Not covered</h2>
       <ul class="clean">
-        <li><b style="color:var(--ink)">Palo Alto / Fortinet / FTD CLI specifics</b> — only generic, cross-vendor tokens (ACL, IPsec, IKE) highlight; vendor-specific command syntax isn't covered yet.</li>
-        <li><b style="color:var(--ink)">Cisco ACI</b> — not covered.</li>
-        <li><b style="color:var(--ink)">Context beyond the current line</b> — SecureCRT highlighting is per-line regex matching; it cannot tell BGP's "Active" state apart from an HSRP "Active" router by looking at surrounding lines.</li>
+        <li><b>Palo Alto / Fortinet / FTD CLI specifics</b> — only generic, cross-vendor tokens (ACL, IPsec, IKE) highlight; vendor-specific command syntax isn't covered yet.</li>
+        <li><b>Cisco ACI</b> — not covered.</li>
+        <li><b>Context beyond the current line</b> — SecureCRT highlighting is per-line regex matching; it cannot tell BGP's "Active" state apart from an HSRP "Active" router by looking at surrounding lines.</li>
       </ul>
     </section>
 
@@ -282,7 +285,7 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
         <li>Run <code>python3 tools/validate_highlights.py</code> to confirm it's well-formed.</li>
         <li>In SecureCRT: <code>Options → Session Options → Terminal → Emulation → Keyword Highlighting → Import</code>, and select the generated <code>.ini</code> file.</li>
       </ol>
-      <p class="soft" style="margin-top:14px;">Or skip the build step entirely — use the Download .ini link at the top of this page to grab the latest generated file directly.</p>
+      <p class="soft mt-note">Or skip the build step entirely — use the Download .ini link at the top of this page to grab the latest generated file directly.</p>
     </section>
 
     <section id="principles">
