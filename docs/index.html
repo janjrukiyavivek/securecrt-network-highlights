@@ -1,216 +1,468 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Network Engineer Ultimate — SecureCRT Highlighting Pack</title>
-<meta name="description" content="A generated, validated SecureCRT keyword-highlighting pack for enterprise network engineers. Cisco, Arista, Juniper, Linux, AWS/Azure, SD-WAN, Sophos, and more.">
-<link rel="icon" type="image/svg+xml" href="https://bytebox.network/assets/bb-logo.svg">
-<style>
-  :root{
-    --bg:#0b1220;
-    --bg-alt:#0d1526;
-    --panel:#111827;
-    --ink:#f8fafc;
-    --ink-soft:#94a3b8;
-    --ink-soft2:#cbd5e1;
-    --rule:rgba(255,255,255,0.08);
-    --accent:#38bdf8;
-    --btn:#0066cc;
-    --btn-hover:#0077ee;
-    --sev-crit:#f87171;
-    --sev-warn:#fbbf24;
-    --sev-ok:#4ade80;
-    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
-    --sans:'Inter','Segoe UI',sans-serif;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font-family:var(--sans);
-    font-size:16px; line-height:1.6;
-  }
-  a{ color:var(--accent); }
-  code{ font-family:var(--mono); }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Network Engineer Ultimate — SecureCRT Highlighting Pack</title>
+    <meta
+      name="description"
+      content="A generated, validated SecureCRT keyword-highlighting pack for enterprise network engineers. Cisco, Arista, Juniper, Linux, AWS/Azure, SD-WAN, Sophos, and more."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://bytebox.network/assets/bb-logo.svg"
+    />
+    <style>
+      :root {
+        --bg: #0b1220;
+        --bg-alt: #0d1526;
+        --panel: #111827;
+        --ink: #f8fafc;
+        --ink-soft: #94a3b8;
+        --ink-soft2: #cbd5e1;
+        --rule: rgba(255, 255, 255, 0.08);
+        --accent: #38bdf8;
+        --btn: #0066cc;
+        --btn-hover: #0077ee;
+        --sev-crit: #f87171;
+        --sev-warn: #fbbf24;
+        --sev-ok: #4ade80;
+        --mono:
+          ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+          monospace;
+        --sans: "Inter", "Segoe UI", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      a {
+        color: var(--accent);
+      }
+      code {
+        font-family: var(--mono);
+      }
 
-  /* ===== TOP BAR ===== */
-  .topbar{
-    position:sticky; top:0; z-index:20;
-    background:rgba(11,18,32,0.92);
-    -webkit-backdrop-filter:blur(6px);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--rule);
-    display:flex; align-items:center; justify-content:space-between;
-    padding:18px 24px;
-  }
-  .topbar .brand{
-    font-weight:700; font-size:15px;
-    color:var(--ink); letter-spacing:0.02em;
-    display:flex; align-items:center; gap:10px;
-    text-decoration:none;
-  }
-  .topbar .brand .logo-mark{ height:28px; width:auto; display:block; }
-  .topbar .links{ display:flex; gap:20px; align-items:center; font-size:13.5px; }
-  .topbar .links a{ color:var(--ink-soft2); text-decoration:none; transition:color 140ms ease; }
-  .topbar .links a:hover{ color:var(--accent); }
+      /* ===== TOP BAR ===== */
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(11, 18, 32, 0.92);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid var(--rule);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 24px;
+      }
+      .topbar .brand {
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--ink);
+        letter-spacing: 0.02em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .topbar .brand .logo-mark {
+        height: 28px;
+        width: auto;
+        display: block;
+      }
+      .topbar .links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        font-size: 13.5px;
+      }
+      .topbar .links a {
+        color: var(--ink-soft2);
+        text-decoration: none;
+        transition: color 140ms ease;
+      }
+      .topbar .links a:hover {
+        color: var(--accent);
+      }
 
-  /* ===== LAYOUT ===== */
-  .shell{ display:flex; max-width:1180px; margin:0 auto; }
-  .sidebar{
-    width:220px; flex-shrink:0;
-    padding:32px 20px 60px 24px;
-    position:sticky; top:65px;
-    align-self:flex-start;
-    height:calc(100vh - 65px);
-    overflow-y:auto;
-  }
-  .sidebar nav{ display:flex; flex-direction:column; gap:2px; }
-  .sidebar a{
-    color:var(--ink-soft); text-decoration:none; font-size:13.5px;
-    padding:6px 10px; border-left:2px solid transparent;
-    transition:color 140ms ease;
-  }
-  .sidebar a:hover{ color:var(--ink); border-left-color:var(--accent); }
-  .sidebar .group-label{
-    font-size:11px; letter-spacing:0.1em; text-transform:uppercase; font-weight:700;
-    color:var(--accent); margin:18px 0 6px 10px;
-  }
-  .sidebar .group-label:first-child{ margin-top:0; }
+      /* ===== LAYOUT ===== */
+      .shell {
+        display: flex;
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+      .sidebar {
+        width: 220px;
+        flex-shrink: 0;
+        padding: 32px 20px 60px 24px;
+        position: sticky;
+        top: 65px;
+        align-self: flex-start;
+        height: calc(100vh - 65px);
+        overflow-y: auto;
+      }
+      .sidebar nav {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .sidebar a {
+        color: var(--ink-soft);
+        text-decoration: none;
+        font-size: 13.5px;
+        padding: 6px 10px;
+        border-left: 2px solid transparent;
+        transition: color 140ms ease;
+      }
+      .sidebar a:hover {
+        color: var(--ink);
+        border-left-color: var(--accent);
+      }
+      .sidebar .group-label {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--accent);
+        margin: 18px 0 6px 10px;
+      }
+      .sidebar .group-label:first-child {
+        margin-top: 0;
+      }
 
-  main{ flex:1; min-width:0; padding:48px 32px 100px; }
-  section{ margin-bottom:64px; scroll-margin-top:80px; }
-  section h2{
-    font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; font-weight:700;
-    color:var(--accent); margin:0 0 18px;
-    display:flex; align-items:center; gap:12px;
-  }
-  section h2::after{ content:""; flex:1; height:1px; background:var(--rule); }
-  section h3{ font-size:16px; font-weight:700; margin:24px 0 8px; color:var(--ink); }
-  section p{ max-width:70ch; color:var(--ink-soft2); margin:0 0 14px; }
-  section p.soft{ color:var(--ink-soft); }
-  .mt-note{ margin-top:14px; }
-  .text-sm{ font-size:13.5px; }
-  ul.clean li b, ol.steps li b{ color:var(--ink); }
+      main {
+        flex: 1;
+        min-width: 0;
+        padding: 48px 32px 100px;
+      }
+      section {
+        margin-bottom: 64px;
+        scroll-margin-top: 80px;
+      }
+      section h2 {
+        font-size: 12.5px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--accent);
+        margin: 0 0 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      section h2::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--rule);
+      }
+      section h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 24px 0 8px;
+        color: var(--ink);
+      }
+      section p {
+        max-width: 70ch;
+        color: var(--ink-soft2);
+        margin: 0 0 14px;
+      }
+      section p.soft {
+        color: var(--ink-soft);
+      }
+      .mt-note {
+        margin-top: 14px;
+      }
+      .text-sm {
+        font-size: 13.5px;
+      }
+      ul.clean li b,
+      ol.steps li b {
+        color: var(--ink);
+      }
 
-  /* ===== HERO ===== */
-  .hero{ padding:8px 0 8px; }
-  .hero h1{
-    font-size:clamp(28px,4vw,42px); font-weight:700;
-    margin:0 0 10px; letter-spacing:-0.01em; text-wrap:balance;
-    color:var(--ink);
-  }
-  .hero .tagline{ font-size:17px; color:var(--ink-soft2); max-width:60ch; margin:0 0 28px; }
+      /* ===== HERO ===== */
+      .hero {
+        padding: 8px 0 8px;
+      }
+      .hero h1 {
+        font-size: clamp(28px, 4vw, 42px);
+        font-weight: 700;
+        margin: 0 0 10px;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+      }
+      .hero .tagline {
+        font-size: 17px;
+        color: var(--ink-soft2);
+        max-width: 60ch;
+        margin: 0 0 28px;
+      }
 
-  /* ===== TERMINAL DEMO ===== */
-  .term{
-    background:#080d16; border:1px solid var(--rule); border-radius:12px;
-    max-width:100%; overflow:hidden;
-    box-shadow:0 20px 50px -30px rgba(0,0,0,0.6);
-  }
-  .term .term-bar{
-    display:flex; align-items:center; gap:8px;
-    padding:10px 14px; border-bottom:1px solid var(--rule);
-  }
-  .term .term-bar .light{ width:10px; height:10px; border-radius:50%; }
-  .term .term-bar .light.r{ background:#f87171; }
-  .term .term-bar .light.y{ background:#fbbf24; }
-  .term .term-bar .light.g{ background:#4ade80; }
-  .term .term-bar .title{ margin-left:10px; font-family:var(--mono); font-size:12px; color:#64748b; }
-  .term pre{
-    margin:0; padding:20px 22px; font-family:var(--mono); font-size:13.5px; line-height:1.75;
-    color:#cbd5e1; white-space:pre; overflow-x:auto;
-  }
-  .term .crit{ color:var(--sev-crit); font-weight:700; }
-  .term .warn{ color:var(--sev-warn); font-weight:700; }
-  .term .ok{ color:var(--sev-ok); font-weight:700; }
-  .term .prompt{ color:var(--accent); }
+      /* ===== TERMINAL DEMO ===== */
+      .term {
+        background: #080d16;
+        border: 1px solid var(--rule);
+        border-radius: 12px;
+        max-width: 100%;
+        overflow: hidden;
+        box-shadow: 0 20px 50px -30px rgba(0, 0, 0, 0.6);
+      }
+      .term .term-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--rule);
+      }
+      .term .term-bar .light {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .term .term-bar .light.r {
+        background: #f87171;
+      }
+      .term .term-bar .light.y {
+        background: #fbbf24;
+      }
+      .term .term-bar .light.g {
+        background: #4ade80;
+      }
+      .term .term-bar .title {
+        margin-left: 10px;
+        font-family: var(--mono);
+        font-size: 12px;
+        color: #64748b;
+      }
+      .term pre {
+        margin: 0;
+        padding: 20px 22px;
+        font-family: var(--mono);
+        font-size: 13.5px;
+        line-height: 1.75;
+        color: #cbd5e1;
+        white-space: pre;
+        overflow-x: auto;
+      }
+      .term .crit {
+        color: var(--sev-crit);
+        font-weight: 700;
+      }
+      .term .warn {
+        color: var(--sev-warn);
+        font-weight: 700;
+      }
+      .term .ok {
+        color: var(--sev-ok);
+        font-weight: 700;
+      }
+      .term .prompt {
+        color: var(--accent);
+      }
 
-  /* ===== TABLES ===== */
-  .table-wrap{ overflow-x:auto; border:1px solid var(--rule); border-radius:10px; }
-  table{ width:100%; border-collapse:collapse; font-size:14px; }
-  th, td{ text-align:left; padding:10px 14px; border-bottom:1px solid var(--rule); }
-  th{ font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); background:var(--panel); }
-  td{ color:var(--ink-soft2); }
-  td.center, th.center{ text-align:center; }
-  .yes{ color:var(--sev-ok); font-weight:700; }
+      /* ===== TABLES ===== */
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--rule);
+      }
+      th {
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        background: var(--panel);
+      }
+      td {
+        color: var(--ink-soft2);
+      }
+      td.center,
+      th.center {
+        text-align: center;
+      }
+      .yes {
+        color: var(--sev-ok);
+        font-weight: 700;
+      }
 
-  /* ===== LISTS ===== */
-  ul.clean{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:10px; }
-  ul.clean li{ padding-left:20px; position:relative; max-width:70ch; color:var(--ink-soft2); }
-  ul.clean li::before{ content:"—"; position:absolute; left:0; color:var(--accent); }
-  ol.steps{ margin:0; padding-left:22px; display:flex; flex-direction:column; gap:8px; color:var(--ink-soft2); }
-  ol.steps li{ max-width:70ch; }
-  ol.steps code{ background:var(--panel); padding:2px 6px; border-radius:4px; border:1px solid var(--rule); font-size:13px; color:var(--ink); }
+      /* ===== LISTS ===== */
+      ul.clean {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      ul.clean li {
+        padding-left: 20px;
+        position: relative;
+        max-width: 70ch;
+        color: var(--ink-soft2);
+      }
+      ul.clean li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+      ol.steps {
+        margin: 0;
+        padding-left: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        color: var(--ink-soft2);
+      }
+      ol.steps li {
+        max-width: 70ch;
+      }
+      ol.steps code {
+        background: var(--panel);
+        padding: 2px 6px;
+        border-radius: 4px;
+        border: 1px solid var(--rule);
+        font-size: 13px;
+        color: var(--ink);
+      }
 
-  /* ===== CHANGELOG ===== */
-  .release{ border-left:2px solid var(--rule); padding-left:20px; margin-bottom:32px; }
-  .release .ver{
-    font-weight:700; font-size:15px; color:var(--ink);
-    margin:0 0 10px;
-  }
-  .release ul{ margin:0; padding-left:18px; }
-  .release li{ font-size:13.5px; color:var(--ink-soft); margin-bottom:6px; max-width:66ch; }
+      /* ===== CHANGELOG ===== */
+      .release {
+        border-left: 2px solid var(--rule);
+        padding-left: 20px;
+        margin-bottom: 32px;
+      }
+      .release .ver {
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--ink);
+        margin: 0 0 10px;
+      }
+      .release ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .release li {
+        font-size: 13.5px;
+        color: var(--ink-soft);
+        margin-bottom: 6px;
+        max-width: 66ch;
+      }
 
-  /* ===== FOOTER ===== */
-  footer{
-    border-top:1px solid var(--rule); padding:28px 32px;
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
-    font-size:13px; color:var(--ink-soft);
-    max-width:1180px; margin:0 auto;
-  }
-  footer a{ color:var(--ink-soft); }
+      /* ===== FOOTER ===== */
+      footer {
+        border-top: 1px solid var(--rule);
+        padding: 28px 32px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+        color: var(--ink-soft);
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+      footer a {
+        color: var(--ink-soft);
+      }
 
-  @media (max-width:860px){
-    .sidebar{ display:none; }
-    main{ padding:32px 20px 80px; }
-  }
-</style>
-</head>
-<body>
+      @media (max-width: 860px) {
+        .sidebar {
+          display: none;
+        }
+        main {
+          padding: 32px 20px 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <a class="brand" href="#overview"
+        ><img
+          src="https://bytebox.network/assets/vj-bb-logo.svg"
+          alt="VJ / ByteBox"
+          class="logo-mark"
+        />Network Engineer Ultimate</a
+      >
+      <div class="links">
+        <a href="https://bytebox.network">Home</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#install">Install</a>
+        <a href="#changelog">Changelog</a>
+        <a
+          href="https://github.com/janjrukiyavivek/securecrt-network-highlights"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+        <a
+          href="https://raw.githubusercontent.com/janjrukiyavivek/securecrt-network-highlights/main/build/Network%20Engineer%20Ultimate.ini"
+          >Download .ini</a
+        >
+      </div>
+    </div>
 
-<div class="topbar">
-  <a class="brand" href="#overview"><img src="https://bytebox.network/assets/vj-bb-logo.svg" alt="VJ / ByteBox" class="logo-mark">Network Engineer Ultimate</a>
-  <div class="links">
-    <a href="https://bytebox.network">Home</a>
-    <a href="#platforms">Platforms</a>
-    <a href="#install">Install</a>
-    <a href="#changelog">Changelog</a>
-    <a href="https://github.com/janjrukiyavivek/securecrt-network-highlights" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://raw.githubusercontent.com/janjrukiyavivek/securecrt-network-highlights/main/build/Network%20Engineer%20Ultimate.ini">Download .ini</a>
-  </div>
-</div>
+    <div class="shell">
+      <aside class="sidebar">
+        <nav>
+          <div class="group-label">Overview</div>
+          <a href="#overview">What is this?</a>
+          <a href="#why">Why it's different</a>
+          <div class="group-label">Coverage</div>
+          <a href="#platforms">Platforms</a>
+          <a href="#features">Features</a>
+          <a href="#unsupported">Not covered</a>
+          <div class="group-label">Use it</div>
+          <a href="#install">Install</a>
+          <a href="#principles">Design principles</a>
+          <a href="#maintaining">Maintaining</a>
+          <div class="group-label">History</div>
+          <a href="#changelog">Changelog</a>
+        </nav>
+      </aside>
 
-<div class="shell">
-  <aside class="sidebar">
-    <nav>
-      <div class="group-label">Overview</div>
-      <a href="#overview">What is this?</a>
-      <a href="#why">Why it's different</a>
-      <div class="group-label">Coverage</div>
-      <a href="#platforms">Platforms</a>
-      <a href="#features">Features</a>
-      <a href="#unsupported">Not covered</a>
-      <div class="group-label">Use it</div>
-      <a href="#install">Install</a>
-      <a href="#principles">Design principles</a>
-      <a href="#maintaining">Maintaining</a>
-      <div class="group-label">History</div>
-      <a href="#changelog">Changelog</a>
-    </nav>
-  </aside>
+      <main>
+        <section class="hero" id="overview">
+          <h1>Network Engineer Ultimate</h1>
+          <p class="tagline">
+            A SecureCRT keyword-highlighting pack generated and validated from
+            data — not hand-edited — covering the multi-vendor CLI output a
+            network engineer actually sees every day.
+          </p>
 
-  <main>
-    <section class="hero" id="overview">
-      <h1>Network Engineer Ultimate</h1>
-      <p class="tagline">A SecureCRT keyword-highlighting pack generated and validated from data — not hand-edited — covering the multi-vendor CLI output a network engineer actually sees every day.</p>
-
-      <div class="term">
-        <div class="term-bar">
-          <span class="light r"></span><span class="light y"></span><span class="light g"></span>
-          <span class="title">SecureCRT — R1</span>
-        </div>
-        <pre><span class="prompt">R1#</span> show ip bgp summary
+          <div class="term">
+            <div class="term-bar">
+              <span class="light r"></span><span class="light y"></span
+              ><span class="light g"></span>
+              <span class="title">SecureCRT — R1</span>
+            </div>
+            <pre><span class="prompt">R1#</span> show ip bgp summary
 BGP router identifier 10.0.0.1, local AS number 65001
 Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/PfxRcd
 10.0.0.2        4 65002     1204     1198        0    0    0 3d04h          <span class="warn">Active</span>
@@ -218,136 +470,340 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
 
 <span class="crit">%LINK-3-UPDOWN</span>: Interface GigabitEthernet0/1, changed state to <span class="crit">down</span>
 <span class="warn">%OSPF-5-ADJCHG</span>: Process 1, Nbr 10.0.0.3 on Gi0/2 from FULL to <span class="crit">DOWN</span></pre>
-      </div>
-      <p class="soft mt-note text-sm">Severity-tiered by design: %LINK-3 and a bare "down" state read as critical (red), %OSPF-5 reads as a warning (amber) — matching SecureCRT's own top-to-bottom, first-match-wins highlighting engine.</p>
-    </section>
+          </div>
+          <p class="soft mt-note text-sm">
+            Severity-tiered by design: %LINK-3 and a bare "down" state read as
+            critical (red), %OSPF-5 reads as a warning (amber) — matching
+            SecureCRT's own top-to-bottom, first-match-wins highlighting engine.
+          </p>
+        </section>
 
-    <section id="why">
-      <h2>Why it's different</h2>
-      <p>Most highlight files accumulate duplicate and conflicting rules over years of manual edits — the same word ends up colored two different ways depending on which rule was pasted in last, and nobody notices because SecureCRT silently uses whichever rule comes first.</p>
-      <p>This pack is generated from <code>tools/build.py</code>, which refuses to build if a regex is duplicated or fails to compile, and <code>tools/validate_highlights.py</code> independently checks the output file's structure. Every cross-section word collision found during development — e.g. "Active" meaning three different things in BGP vs. HSRP vs. generic interface state — was deliberately resolved and documented inline in the build script, not left as a silent bug.</p>
-    </section>
+        <section id="why">
+          <h2>Why it's different</h2>
+          <p>
+            Most highlight files accumulate duplicate and conflicting rules over
+            years of manual edits — the same word ends up colored two different
+            ways depending on which rule was pasted in last, and nobody notices
+            because SecureCRT silently uses whichever rule comes first.
+          </p>
+          <p>
+            This pack is generated from <code>tools/build.py</code>, which
+            refuses to build if a regex is duplicated or fails to compile, and
+            <code>tools/validate_highlights.py</code> independently checks the
+            output file's structure. Every cross-section word collision found
+            during development — e.g. "Active" meaning three different things in
+            BGP vs. HSRP vs. generic interface state — was deliberately resolved
+            and documented inline in the build script, not left as a silent bug.
+          </p>
+        </section>
 
-    <section id="platforms">
-      <h2>Platforms supported</h2>
-      <div class="table-wrap">
-        <table>
-          <tr><th>Platform</th><th class="center">Status</th></tr>
-          <tr><td>Cisco IOS / IOS-XE / NX-OS / IOS-XR / ASA</td><td class="center yes">✓</td></tr>
-          <tr><td>Arista EOS</td><td class="center yes">✓</td></tr>
-          <tr><td>Juniper JunOS</td><td class="center yes">✓</td></tr>
-          <tr><td>Linux</td><td class="center yes">✓</td></tr>
-          <tr><td>FRRouting / VyOS</td><td class="center yes">✓</td></tr>
-          <tr><td>AWS / Azure networking, VMware NSX</td><td class="center yes">✓</td></tr>
-          <tr><td>WireGuard</td><td class="center yes">✓</td></tr>
-          <tr><td>Cisco SD-WAN (vManage / vSmart / vBond)</td><td class="center yes">✓</td></tr>
-          <tr><td>Sophos Firewall (SFOS)</td><td class="center yes">✓</td></tr>
-          <tr><td>tcpdump output</td><td class="center yes">✓</td></tr>
-        </table>
-      </div>
-    </section>
+        <section id="platforms">
+          <h2>Platforms supported</h2>
+          <div class="table-wrap">
+            <table>
+              <tr>
+                <th>Platform</th>
+                <th class="center">Status</th>
+              </tr>
+              <tr>
+                <td>Cisco IOS / IOS-XE / NX-OS / IOS-XR / ASA</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Arista EOS</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Juniper JunOS</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Linux</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>FRRouting / VyOS</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>AWS / Azure networking, VMware NSX</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>WireGuard</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Cisco SD-WAN (vManage / vSmart / vBond)</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Sophos Firewall (SFOS)</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>tcpdump output</td>
+                <td class="center yes">✓</td>
+              </tr>
+            </table>
+          </div>
+        </section>
 
-    <section id="features">
-      <h2>Features covered</h2>
-      <div class="table-wrap">
-        <table>
-          <tr><th>Feature</th><th class="center">Status</th></tr>
-          <tr><td>BGP / OSPF / ISIS / EIGRP / RIP</td><td class="center yes">✓</td></tr>
-          <tr><td>MPLS / LDP / Segment Routing</td><td class="center yes">✓</td></tr>
-          <tr><td>VXLAN / EVPN (route types)</td><td class="center yes">✓</td></tr>
-          <tr><td>HSRP / VRRP / GLBP (FHRP)</td><td class="center yes">✓</td></tr>
-          <tr><td>PIM / MSDP / IGMP</td><td class="center yes">✓</td></tr>
-          <tr><td>Nexus vPC, StackWise / VSS</td><td class="center yes">✓</td></tr>
-          <tr><td>Syslog severity (0–7, colour per tier)</td><td class="center yes">✓</td></tr>
-          <tr><td>Dangerous commands (reverse video)</td><td class="center yes">✓</td></tr>
-          <tr><td>Optical DOM readings</td><td class="center yes">✓</td></tr>
-          <tr><td>Hardware (Supervisor / Linecard / FPGA)</td><td class="center yes">✓</td></tr>
-          <tr><td>Cisco bug IDs (CSCxxNNNNN) / CVEs</td><td class="center yes">✓</td></tr>
-          <tr><td>Sophos VPN / HA / firewall-action events</td><td class="center yes">✓</td></tr>
-          <tr><td>tcpdump TCP flags ([S] / [R] / [F] / [.])</td><td class="center yes">✓</td></tr>
-        </table>
-      </div>
-    </section>
+        <section id="features">
+          <h2>Features covered</h2>
+          <div class="table-wrap">
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th class="center">Status</th>
+              </tr>
+              <tr>
+                <td>BGP / OSPF / ISIS / EIGRP / RIP</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>MPLS / LDP / Segment Routing</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>VXLAN / EVPN (route types)</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>HSRP / VRRP / GLBP (FHRP)</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>PIM / MSDP / IGMP</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Nexus vPC, StackWise / VSS</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Syslog severity (0–7, colour per tier)</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Dangerous commands (reverse video)</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Optical DOM readings</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Hardware (Supervisor / Linecard / FPGA)</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Cisco bug IDs (CSCxxNNNNN) / CVEs</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>Sophos VPN / HA / firewall-action events</td>
+                <td class="center yes">✓</td>
+              </tr>
+              <tr>
+                <td>tcpdump TCP flags ([S] / [R] / [F] / [.])</td>
+                <td class="center yes">✓</td>
+              </tr>
+            </table>
+          </div>
+        </section>
 
-    <section id="unsupported">
-      <h2>Not covered</h2>
-      <ul class="clean">
-        <li><b>Palo Alto / Fortinet / FTD CLI specifics</b> — only generic, cross-vendor tokens (ACL, IPsec, IKE) highlight; vendor-specific command syntax isn't covered yet.</li>
-        <li><b>Cisco ACI</b> — not covered.</li>
-        <li><b>Context beyond the current line</b> — SecureCRT highlighting is per-line regex matching; it cannot tell BGP's "Active" state apart from an HSRP "Active" router by looking at surrounding lines.</li>
-      </ul>
-    </section>
+        <section id="unsupported">
+          <h2>Not covered</h2>
+          <ul class="clean">
+            <li>
+              <b>Palo Alto / Fortinet / FTD CLI specifics</b> — only generic,
+              cross-vendor tokens (ACL, IPsec, IKE) highlight; vendor-specific
+              command syntax isn't covered yet.
+            </li>
+            <li><b>Cisco ACI</b> — not covered.</li>
+            <li>
+              <b>Context beyond the current line</b> — SecureCRT highlighting is
+              per-line regex matching; it cannot tell BGP's "Active" state apart
+              from an HSRP "Active" router by looking at surrounding lines.
+            </li>
+          </ul>
+        </section>
 
-    <section id="install">
-      <h2>Install</h2>
-      <ol class="steps">
-        <li>Run <code>python3 tools/build.py</code> to (re)generate <code>build/Network Engineer Ultimate.ini</code>.</li>
-        <li>Run <code>python3 tools/validate_highlights.py</code> to confirm it's well-formed.</li>
-        <li>In SecureCRT: <code>Options → Session Options → Terminal → Emulation → Keyword Highlighting → Import</code>, and select the generated <code>.ini</code> file.</li>
-      </ol>
-      <p class="soft mt-note">Or skip the build step entirely — use the Download .ini link at the top of this page to grab the latest generated file directly.</p>
-    </section>
+        <section id="install">
+          <h2>Install</h2>
+          <ol class="steps">
+            <li>
+              Run <code>python3 tools/build.py</code> to (re)generate
+              <code>build/Network Engineer Ultimate.ini</code>.
+            </li>
+            <li>
+              Run <code>python3 tools/validate_highlights.py</code> to confirm
+              it's well-formed.
+            </li>
+            <li>
+              In SecureCRT:
+              <code
+                >Options → Session Options → Terminal → Emulation → Keyword
+                Highlighting → Import</code
+              >, and select the generated <code>.ini</code> file.
+            </li>
+          </ol>
+          <p class="soft mt-note">
+            Or skip the build step entirely — use the Download .ini link at the
+            top of this page to grab the latest generated file directly.
+          </p>
+        </section>
 
-    <section id="principles">
-      <h2>Design principles</h2>
-      <ul class="clean">
-        <li>Designed for production troubleshooting, not a colorful terminal. A rule only exists if it highlights a condition that needs attention or speeds up reading dense CLI output.</li>
-        <li>Highlight the exception, not the norm: counters only light up when non-zero; "down" only matches when it's actually describing link/protocol state.</li>
-        <li>Specific regex before generic regex, always — SecureCRT applies the first matching rule top-to-bottom per character, so ordering is the mechanism that decides which color wins a contested word.</li>
-        <li>Generated from data (<code>tools/build.py</code>), not hand-edited, so duplicate and conflicting rules are caught by the build itself instead of accumulating silently over years.</li>
-        <li>Scope is intentionally limited to platforms validated against real sample output — new vendor support is added based on real-world usage, not completeness for its own sake.</li>
-      </ul>
-    </section>
+        <section id="principles">
+          <h2>Design principles</h2>
+          <ul class="clean">
+            <li>
+              Designed for production troubleshooting, not a colorful terminal.
+              A rule only exists if it highlights a condition that needs
+              attention or speeds up reading dense CLI output.
+            </li>
+            <li>
+              Highlight the exception, not the norm: counters only light up when
+              non-zero; "down" only matches when it's actually describing
+              link/protocol state.
+            </li>
+            <li>
+              Specific regex before generic regex, always — SecureCRT applies
+              the first matching rule top-to-bottom per character, so ordering
+              is the mechanism that decides which color wins a contested word.
+            </li>
+            <li>
+              Generated from data (<code>tools/build.py</code>), not
+              hand-edited, so duplicate and conflicting rules are caught by the
+              build itself instead of accumulating silently over years.
+            </li>
+            <li>
+              Scope is intentionally limited to platforms validated against real
+              sample output — new vendor support is added based on real-world
+              usage, not completeness for its own sake.
+            </li>
+          </ul>
+        </section>
 
-    <section id="maintaining">
-      <h2>Maintaining</h2>
-      <p>All rules live as data in <code>tools/build.py</code> (see <code>docs/REGEX_GUIDE.md</code> for conventions). To add or change a rule:</p>
-      <ol class="steps">
-        <li>Edit <code>tools/build.py</code> — it fails loudly on a duplicate or invalid regex rather than silently producing a broken file.</li>
-        <li>Run <code>python3 tools/validate_highlights.py</code> to check the generated file's structure.</li>
-        <li>Run <code>python3 tools/test_samples.py</code> to see how the new rule renders against realistic multi-vendor <code>show</code>-command output, and confirm nothing else's coloring shifted as a side effect.</li>
-      </ol>
-    </section>
+        <section id="maintaining">
+          <h2>Maintaining</h2>
+          <p>
+            All rules live as data in <code>tools/build.py</code> (see
+            <code>docs/REGEX_GUIDE.md</code> for conventions). To add or change
+            a rule:
+          </p>
+          <ol class="steps">
+            <li>
+              Edit <code>tools/build.py</code> — it fails loudly on a duplicate
+              or invalid regex rather than silently producing a broken file.
+            </li>
+            <li>
+              Run <code>python3 tools/validate_highlights.py</code> to check the
+              generated file's structure.
+            </li>
+            <li>
+              Run <code>python3 tools/test_samples.py</code> to see how the new
+              rule renders against realistic multi-vendor
+              <code>show</code>-command output, and confirm nothing else's
+              coloring shifted as a side effect.
+            </li>
+          </ol>
+        </section>
 
-    <section id="changelog">
-      <h2>Changelog</h2>
+        <section id="changelog">
+          <h2>Changelog</h2>
 
-      <div class="release">
-        <p class="ver">v1.2</p>
-        <ul>
-          <li>Added <code>tools/test_samples.py</code>, simulating SecureCRT's actual top-to-bottom, first-match-wins behaviour against realistic multi-vendor output — surfaced and fixed four real bugs (BGP best-path marker misread as a login prompt, "line protocol is down" losing its colour to a generic rule, a Route Target regex colliding with BGP uptime timestamps, and EVPN bracket-notation route types not matching).</li>
-          <li>Added a curated Sophos Firewall (SFOS) section: platform terms, daemon/service names, firewall actions, VPN/HA/routing events, security modules, and audit terms.</li>
-          <li>Added a tcpdump-output section: TCP flag brackets coloured by severity, seq/ack/win/length fields, ICMPv6, and microsecond timestamps.</li>
-          <li>Removed the legacy <code>source/</code> directory of reference files — no longer presented as a merge of prior highlight packs.</li>
-        </ul>
-      </div>
+          <div class="release">
+            <p class="ver">v1.2</p>
+            <ul>
+              <li>
+                Added <code>tools/test_samples.py</code>, simulating SecureCRT's
+                actual top-to-bottom, first-match-wins behaviour against
+                realistic multi-vendor output — surfaced and fixed four real
+                bugs (BGP best-path marker misread as a login prompt, "line
+                protocol is down" losing its colour to a generic rule, a Route
+                Target regex colliding with BGP uptime timestamps, and EVPN
+                bracket-notation route types not matching).
+              </li>
+              <li>
+                Added a curated Sophos Firewall (SFOS) section: platform terms,
+                daemon/service names, firewall actions, VPN/HA/routing events,
+                security modules, and audit terms.
+              </li>
+              <li>
+                Added a tcpdump-output section: TCP flag brackets coloured by
+                severity, seq/ack/win/length fields, ICMPv6, and microsecond
+                timestamps.
+              </li>
+              <li>
+                Removed the legacy <code>source/</code> directory of reference
+                files — no longer presented as a merge of prior highlight packs.
+              </li>
+            </ul>
+          </div>
 
-      <div class="release">
-        <p class="ver">v1.1</p>
-        <ul>
-          <li>Added NX-OS fabric (CFSoE, FabricPath, OTV, FEX, VN-Segment), Cisco SD-WAN, expanded AWS and Linux sections.</li>
-          <li>Added Cisco bug ID (<code>CSCxxNNNNN</code>) and CVE highlighting, Nexus vPC, StackWise/VSS.</li>
-          <li>Added EVPN route types, scoped to avoid colliding with Nexus vPC's unrelated wording.</li>
-          <li>Split syslog severity into four colour tiers instead of one flat colour for every facility line.</li>
-          <li>Made interface "down" state context-aware instead of matching the bare word anywhere on the line.</li>
-        </ul>
-      </div>
+          <div class="release">
+            <p class="ver">v1.1</p>
+            <ul>
+              <li>
+                Added NX-OS fabric (CFSoE, FabricPath, OTV, FEX, VN-Segment),
+                Cisco SD-WAN, expanded AWS and Linux sections.
+              </li>
+              <li>
+                Added Cisco bug ID (<code>CSCxxNNNNN</code>) and CVE
+                highlighting, Nexus vPC, StackWise/VSS.
+              </li>
+              <li>
+                Added EVPN route types, scoped to avoid colliding with Nexus
+                vPC's unrelated wording.
+              </li>
+              <li>
+                Split syslog severity into four colour tiers instead of one flat
+                colour for every facility line.
+              </li>
+              <li>
+                Made interface "down" state context-aware instead of matching
+                the bare word anywhere on the line.
+              </li>
+            </ul>
+          </div>
 
-      <div class="release">
-        <p class="ver">v1.0 — Network Engineer Ultimate</p>
-        <ul>
-          <li>Initial release. Engineered from scratch as a generated, validated keyword-highlight pack.</li>
-          <li>44 sections, 118 regex rules, covering Cisco IOS/IOS-XE/NX-OS/IOS-XR/ASA, Arista EOS, Juniper JunOS, Linux, FRRouting, VyOS, AWS/Azure/NSX, and WireGuard.</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-</div>
+          <div class="release">
+            <p class="ver">v1.0 — Network Engineer Ultimate</p>
+            <ul>
+              <li>
+                Initial release. Engineered from scratch as a generated,
+                validated keyword-highlight pack.
+              </li>
+              <li>
+                44 sections, 118 regex rules, covering Cisco
+                IOS/IOS-XE/NX-OS/IOS-XR/ASA, Arista EOS, Juniper JunOS, Linux,
+                FRRouting, VyOS, AWS/Azure/NSX, and WireGuard.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
 
-<footer>
-  <span>MIT Licensed · <a href="https://github.com/janjrukiyavivek/securecrt-network-highlights" target="_blank" rel="noopener">github.com/janjrukiyavivek/securecrt-network-highlights</a></span>
-  <span>Built by <a href="https://bytebox.network" target="_blank" rel="noopener">Vivek Janjrukiya</a> with ❤️</span>
-</footer>
-
-</body>
+    <footer>
+      <span
+        >MIT Licensed ·
+        <a
+          href="https://github.com/janjrukiyavivek/securecrt-network-highlights"
+          target="_blank"
+          rel="noopener"
+          >github.com/janjrukiyavivek/securecrt-network-highlights</a
+        ></span
+      >
+      <span
+        >Built by
+        <a href="https://bytebox.network" target="_blank" rel="noopener"
+          >Vivek Janjrukiya</a
+        >
+        with ❤️</span
+      >
+    </footer>
+  </body>
 </html>
