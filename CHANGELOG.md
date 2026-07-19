@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.3
+
+- Added a GitHub Pages documentation site at `securecrt.bytebox.network`, generated
+  from the actual README/CHANGELOG content: platform/feature tables, install and
+  maintaining guides, design principles, and full changelog history, plus a live
+  terminal-style demo of the highlighting in action.
+- Adopted a shared sidebar-nav documentation template (also used by other projects
+  under bytebox.network), matching the main site's navy/sky-blue theme.
+- Added VJ + ByteBox logo marks as favicon and nav brand mark.
+- Fixed nav consistency: removed inconsistent button-styling from links so every
+  nav item reads as plain navigation; "Home" link added back to the main site.
+- Fixed a Safari compatibility bug (`backdrop-filter` missing the `-webkit-` prefix
+  on the sticky nav).
+- Removed `text-wrap: balance` from the docs site for broader Chrome compatibility.
+- Cleaned up inline styles on the docs page, moving them into real CSS classes.
+- Cleaned up repo hygiene: added a top-level heading to `LICENSE` (markdownlint
+  MD041), fixed markdown table formatting and spell-check word list entries,
+  removed committed Ruff cache directory and added it to `.gitignore`.
+
 ## v1.2
 
 - Added `tools/test_samples.py`, which simulates SecureCRT's actual
