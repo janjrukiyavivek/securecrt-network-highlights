@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Network Engineer Ultimate — SecureCRT Highlighting Pack</title>
 <meta name="description" content="A generated, validated SecureCRT keyword-highlighting pack for enterprise network engineers. Cisco, Arista, Juniper, Linux, AWS/Azure, SD-WAN, Sophos, and more.">
+<link rel="icon" type="image/svg+xml" href="https://bytebox.network/assets/bb-logo.svg">
 <style>
   :root{
     --bg:#0b1220;
@@ -37,6 +38,7 @@
   .topbar{
     position:sticky; top:0; z-index:20;
     background:rgba(11,18,32,0.92);
+    -webkit-backdrop-filter:blur(6px);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--rule);
     display:flex; align-items:center; justify-content:space-between;
@@ -45,10 +47,10 @@
   .topbar .brand{
     font-weight:700; font-size:15px;
     color:var(--ink); letter-spacing:0.02em;
-    display:flex; align-items:center; gap:8px;
+    display:flex; align-items:center; gap:10px;
     text-decoration:none;
   }
-  .topbar .brand .dot{ color:var(--accent); }
+  .topbar .brand .logo-mark{ height:28px; width:auto; display:block; }
   .topbar .links{ display:flex; gap:20px; align-items:center; font-size:13.5px; }
   .topbar .links a{ color:var(--ink-soft2); text-decoration:none; transition:color 140ms ease; }
   .topbar .links a:hover{ color:var(--accent); }
@@ -165,7 +167,7 @@
 <body>
 
 <div class="topbar">
-  <a class="brand" href="#overview"><span class="dot">▍</span>Network Engineer Ultimate</a>
+  <a class="brand" href="#overview"><img src="https://bytebox.network/assets/vj-bb-logo.svg" alt="VJ / ByteBox" class="logo-mark">Network Engineer Ultimate</a>
   <div class="links">
     <a href="https://bytebox.network">Home</a>
     <a href="#platforms">Platforms</a>
