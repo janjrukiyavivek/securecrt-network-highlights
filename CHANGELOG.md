@@ -15,9 +15,20 @@
   on the sticky nav).
 - Removed `text-wrap: balance` from the docs site for broader Chrome compatibility.
 - Cleaned up inline styles on the docs page, moving them into real CSS classes.
-- Cleaned up repo hygiene: added a top-level heading to `LICENSE` (markdownlint
-  MD041), fixed markdown table formatting and spell-check word list entries,
-  removed committed Ruff cache directory and added it to `.gitignore`.
+
+## v1.2.1
+
+- Reformatted the Markdown tables in `README.md` and `docs/COLOR_GUIDE.md`
+  to compact pipe style, fixing markdownlint MD060 warnings.
+- Added `.cspell.json` to whitelist legitimate networking acronyms, vendor
+  names, and regex `\b`-prefixed fragments (e.g. `\bvfc`,
+  `communit(?:y|ies)`) that the spell checker was misreading as typos.
+- Renamed the ambiguous `l` loop variable to `line` in
+  `tools/validate_highlights.py` (Ruff E741).
+- Added a top-level `#` heading to `LICENSE` so it satisfies markdownlint
+  MD041; also excluded it via `.markdownlintignore` as a fallback.
+- Removed an accidentally committed `.ruff_cache` directory and added it to
+  `.gitignore`.
 
 ## v1.2
 
