@@ -48,29 +48,29 @@ in the build script, not left as a silent bug.
 
 ## What platforms are supported?
 
-| Platform     | Supported |
-| ------------ | :-------: |
-| Cisco IOS    | ✅ |
+| Platform | Supported |
+| --- | --- |
+| Cisco IOS | ✅ |
 | Cisco IOS-XE | ✅ |
-| Cisco NX-OS  | ✅ |
+| Cisco NX-OS | ✅ |
 | Cisco IOS-XR | ✅ |
-| Cisco ASA    | ✅ |
-| Arista EOS   | ✅ |
-| Juniper JunOS| ✅ |
-| Linux        | ✅ |
+| Cisco ASA | ✅ |
+| Arista EOS | ✅ |
+| Juniper JunOS | ✅ |
+| Linux | ✅ |
 | FRRouting / VyOS | ✅ |
 | AWS networking | ✅ |
 | Azure networking | ✅ |
-| VMware NSX   | ✅ |
-| WireGuard    | ✅ |
+| VMware NSX | ✅ |
+| WireGuard | ✅ |
 | Cisco SD-WAN (vManage/vSmart/vBond) | ✅ |
 | Sophos Firewall (SFOS) | ✅ |
 | tcpdump output | ✅ |
 
 ## What features are covered?
 
-| Feature              | Supported |
-| --------------------- | :-------: |
+| Feature | Supported |
+| --- | --- |
 | BGP / OSPF / ISIS / EIGRP / RIP | ✅ |
 | MPLS / LDP / Segment Routing | ✅ |
 | VXLAN / EVPN (route types) | ✅ |

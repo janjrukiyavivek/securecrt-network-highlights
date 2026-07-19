@@ -13,7 +13,7 @@ def load(path):
     with open(path) as fh:
         lines = fh.read().splitlines()
 
-    count_line = next(l for l in lines if l.startswith('Z:"Keyword List V3"='))
+    count_line = next(line for line in lines if line.startswith('Z:"Keyword List V3"='))
     declared = int(count_line.split("=", 1)[1], 16)
 
     entries = []
