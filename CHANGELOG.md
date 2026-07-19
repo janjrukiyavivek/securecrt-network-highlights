@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.1
+
+- Reformatted the Markdown tables in `README.md` and `docs/COLOR_GUIDE.md`
+  to compact pipe style, fixing markdownlint MD060 warnings.
+- Added `.cspell.json` to whitelist legitimate networking acronyms, vendor
+  names, and regex `\b`-prefixed fragments (e.g. `\bvfc`,
+  `communit(?:y|ies)`) that the spell checker was misreading as typos.
+- Renamed the ambiguous `l` loop variable to `line` in
+  `tools/validate_highlights.py` (Ruff E741).
+- Added a top-level `#` heading to `LICENSE` so it satisfies markdownlint
+  MD041; also excluded it via `.markdownlintignore` as a fallback.
+
 ## v1.2
 
 - Added `tools/test_samples.py`, which simulates SecureCRT's actual
