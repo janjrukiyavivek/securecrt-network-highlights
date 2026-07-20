@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://securecrt.bytebox.network/sitemap.xml
