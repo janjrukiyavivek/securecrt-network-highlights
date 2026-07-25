@@ -128,6 +128,6 @@ tools/    build.py generates build/Network Engineer Ultimate.ini from data;
           validate_highlights.py checks the generated file for format/dup errors;
           test_samples.py runs the rules against realistic CLI output samples
 build/    the generated output -- import this into SecureCRT
-docs/     REGEX_GUIDE.md, COLOR_GUIDE.md, and the GitHub Pages documentation
-          site (index.html) served at securecrt.bytebox.network
+docs/     REGEX_GUIDE.md and COLOR_GUIDE.md -- maintainer reference docs on
+          the regex conventions used in tools/build.py
 ```
