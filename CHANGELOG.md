@@ -8,13 +8,20 @@
   terminal-style demo of the highlighting in action.
 - Adopted a shared sidebar-nav documentation template (also used by other projects
   under bytebox.network), matching the main site's navy/sky-blue theme.
-- Added VJ + ByteBox logo marks as favicon and nav brand mark.
+- Added ByteBox logo marks as favicon and nav brand mark; later updated to
+  the current `bytebox-logo-white.svg`/`bytebox-icon.svg` assets after the
+  original `vj-bb-logo.svg`/`bb-logo.svg` URLs were retired on the main
+  site (both were 404ing, showing a broken-image icon in the nav and tab).
 - Fixed nav consistency: removed inconsistent button-styling from links so every
   nav item reads as plain navigation; "Home" link added back to the main site.
 - Fixed a Safari compatibility bug (`backdrop-filter` missing the `-webkit-` prefix
   on the sticky nav).
 - Removed `text-wrap: balance` from the docs site for broader Chrome compatibility.
 - Cleaned up inline styles on the docs page, moving them into real CSS classes.
+- Added SEO fundamentals to the docs site: canonical URL tag, Open Graph
+  and Twitter Card tags, `SoftwareApplication` JSON-LD structured data,
+  `sitemap.xml`, and `robots.txt`.
+- Added a `security.txt` (RFC 9116) at `/.well-known/security.txt`.
 
 ## v1.2.1
 
