@@ -1,0 +1,4 @@
+Contact: mailto:vivek@bytebox.network
+Preferred-Languages: en
+Canonical: https://securecrt.bytebox.network/.well-known/security.txt
+Expires: 2027-07-25T00:00:00.000Z
