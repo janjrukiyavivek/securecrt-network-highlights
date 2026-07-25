@@ -761,96 +761,15 @@ Neighbor        V    AS  MsgRcvd  MsgSent   TblVer  InQ OutQ  Up/Down  State/Pfx
 
         <section id="changelog">
           <h2>Changelog</h2>
-
-          <div class="release">
-            <p class="ver">v1.3</p>
-            <ul>
-              <li>
-                Added this GitHub Pages documentation site at
-                <code>securecrt.bytebox.network</code>, generated from the
-                README/CHANGELOG content: platform/feature tables, install
-                and maintaining guides, design principles, and full
-                changelog history, plus a live terminal-style demo of the
-                highlighting in action.
-              </li>
-              <li>
-                Adopted a shared sidebar-nav documentation template (also
-                used by other projects under bytebox.network), matching the
-                main site's navy/sky-blue theme.
-              </li>
-              <li>
-                Added ByteBox logo marks as favicon and nav brand mark;
-                later updated to the current
-                <code>bytebox-logo-white.svg</code>/<code
-                  >bytebox-icon.svg</code
-                >
-                assets after the original URLs were retired on the main
-                site (both were 404ing, showing a broken-image icon).
-              </li>
-              <li>
-                Fixed nav consistency: removed inconsistent button-styling
-                from links so every nav item reads as plain navigation;
-                "Home" link added back to the main site.
-              </li>
-              <li>
-                Fixed a Safari compatibility bug (<code
-                  >backdrop-filter</code
-                >
-                missing the <code>-webkit-</code> prefix on the sticky
-                nav).
-              </li>
-              <li>
-                Removed <code>text-wrap: balance</code> from the docs site
-                for broader Chrome compatibility.
-              </li>
-              <li>
-                Cleaned up inline styles on the docs page, moving them into
-                real CSS classes.
-              </li>
-              <li>
-                Added SEO fundamentals: canonical URL tag, Open Graph and
-                Twitter Card tags, <code>SoftwareApplication</code> JSON-LD
-                structured data, <code>sitemap.xml</code>, and
-                <code>robots.txt</code>.
-              </li>
-              <li>
-                Added a <code>security.txt</code> (RFC 9116) at
-                <code>/.well-known/security.txt</code>.
-              </li>
-            </ul>
-          </div>
-
-          <div class="release">
-            <p class="ver">v1.2.1</p>
-            <ul>
-              <li>
-                Reformatted the Markdown tables in <code>README.md</code>
-                and <code>docs/COLOR_GUIDE.md</code> to compact pipe style,
-                fixing markdownlint MD060 warnings.
-              </li>
-              <li>
-                Added <code>.cspell.json</code> to whitelist legitimate
-                networking acronyms, vendor names, and regex
-                <code>\b</code>-prefixed fragments that the spell checker
-                was misreading as typos.
-              </li>
-              <li>
-                Renamed the ambiguous <code>l</code> loop variable to
-                <code>line</code> in
-                <code>tools/validate_highlights.py</code> (Ruff E741).
-              </li>
-              <li>
-                Added a top-level <code>#</code> heading to
-                <code>LICENSE</code> so it satisfies markdownlint MD041;
-                also excluded it via <code>.markdownlintignore</code> as a
-                fallback.
-              </li>
-              <li>
-                Removed an accidentally committed <code>.ruff_cache</code>
-                directory and added it to <code>.gitignore</code>.
-              </li>
-            </ul>
-          </div>
+          <p class="soft text-sm">
+            Product changes to the highlighting pack itself. For the full
+            repo history, including documentation-site and tooling changes,
+            see
+            <a
+              href="https://github.com/janjrukiyavivek/securecrt-network-highlights/blob/main/CHANGELOG.md"
+              >CHANGELOG.md</a
+            >.
+          </p>
 
           <div class="release">
             <p class="ver">v1.2</p>
